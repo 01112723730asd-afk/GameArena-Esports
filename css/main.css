@@ -1,0 +1,1180 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+    background: #0B0E13;
+    padding: 16px 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+.nav-item {
+    margin: 0px 16px 0px 0px;
+}
+
+.logo {
+    color:rgb(203, 254, 28);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0px 32px 0px 0px;
+    text-decoration: none;
+}
+
+.logo i {
+    margin: 0px 8px 0px 0px;
+}
+
+.nav-item .nav-link {
+    color: #DADADA;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.nav-item .nav-link:hover {
+    color: #cbfe1c;
+    transition: all 0.3s;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+}
+
+.btn-icon i{
+    color: white;
+    font-size: 18px;
+}
+
+.btn-icon i:hover {
+    color: #cbfe1c;
+    transition: all 0.2s;
+}
+
+.btn-signin {
+    padding: 8px 24px;
+    margin: 0px 16px 0px 0px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #0b0e13;
+    background: #cbfe1c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 0;
+}
+
+nav .navbar-icons .btn-signin:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 111%;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0)
+    );
+    width: 50%;
+    height: 100%;
+    transform: skew(45deg);
+    transition: right 0.6s;
+}
+nav .navbar-icons .btn-signin:hover {
+    background-color: #97bd16;
+}
+nav .navbar-icons .btn-signin:hover::before {
+    right: -100%;
+}
+
+/* ========== HERO ========== */
+#hero {
+    background-image:
+    linear-gradient(#000000e0, #000000e0),url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+#hero .heroContent .heroText h1 {
+    font-family: "Days One", sans-serif;
+    font-size: 60px;
+    line-height: 75px;
+    margin-bottom: 24px;
+    font-weight: bold;
+}
+
+#hero .heroContent .heroText h1 span {
+    color: rgb(203, 254, 28);
+}
+
+#hero .heroContent .heroText p {
+    font-size: 16px;
+    color: #d1d5dc;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 32px;
+}
+
+#hero button {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 32px;
+    border-radius: 10px;
+}
+
+#hero button.start {
+    background-color: #cbfe1c;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero button.start::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 130%;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0)
+    );
+    width: 50%;
+    height: 100%;
+    transform: skew(60deg);
+    transition: right 0.6s;
+}
+
+#hero button.start:hover::before {
+    right: -100%;
+}
+
+#hero button.watch {
+    border: 2px solid #cbfe1c;
+    background-color: transparent;
+    color: #cbfe1c;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero button.watch::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 130%;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0)
+    );
+    width: 50%;
+    height: 100%;
+    transform: skew(60deg);
+    transition: right 0.6s;
+}
+
+#hero button.watch:hover {
+    background-color: #cbfe1c;
+    color: #000;
+}
+
+#hero button.watch:hover::before {
+    right: -100%;
+}
+
+#hero .heroContent .heroImage {
+    background-image: linear-gradient(90deg, #c9fe22, #07DF72);
+    border-radius: 13px;
+    padding: 4px;
+}
+
+#hero .heroContent .heroImage img {
+    height: 24rem;
+    border-radius: 13px;
+}
+
+#hero .heroContent .heroImage .bottomText {
+    bottom: -13px;
+    left: -30px;
+    background-color: #0b0e13;
+    border: 1px solid #364153;
+    padding: 14px 26px;
+    border-radius: 10px;
+}
+
+#hero .heroContent .heroImage .bottomText i {
+    color: #cbfe1c;
+    font-size: 20px;
+}
+
+.text {
+    padding: 12px;
+}
+
+#hero .heroContent .heroImage .bottomText p {
+    margin-bottom: 0 !important;
+}
+
+#hero .heroContent .heroImage .bottomText .text p.status {
+    color: #99a1af;
+    font-size: 14px;
+}
+
+#hero .heroContent .heroImage .bottomText .text p.numbers {
+    font-size: 20px;
+}
+
+
+/* ======= GAME ========= */
+#games {
+    background-color: #0B0E13;
+}
+
+.topText {
+    padding-block: 96px;
+}
+
+.topText p.decorated {
+    font-family: "Chakra Petch", sans-serif;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #cbfe1c;
+    letter-spacing: 3px;
+}
+
+.topText p.decorated::after {
+    position: absolute;
+    content: "";
+    width: 73px;
+    height: 3px;
+    background-image: linear-gradient(
+        to right,
+        #cbfe1c,
+        #0B0E13
+    );
+    top: 43%;
+    left: 55%;
+}
+
+.topText p.decorated::before {
+    position: absolute;
+    content: "";
+    width: 73px;
+    height: 3px;
+    background-image: linear-gradient(
+        to left,
+        #cbfe1c,
+        #0B0E13
+    );
+    top: 43%;
+    right: 55%;
+}
+
+.topText h2 {
+    color: #fff;
+    font-size: 48px;
+    line-height: 48px;
+}
+
+#games .sliderLayOut {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 167px;
+}
+#games .sliderLayOut .image {
+    width: 31.5%;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+#games .sliderLayOut .image img {
+    object-fit: cover;
+    height: 300px;
+    border-radius: 20px;
+}
+#games .hoverLayOut {
+    border: 2px solid #cbfe1c;
+    border-radius: 20px;
+    background-image: linear-gradient(
+        to bottom,
+        #e2ff8403,
+        #e4ff8e54,
+        #cbfe1c
+    );
+    opacity: 0;
+    transition: all 0.3s;
+}
+#games .hoverLayOut .top {
+    gap: 13px;
+    transform: translateY(-58px);
+    transition: all 0.3s;
+}
+#games .hoverLayOut .top div {
+    background-color: rgb(0 0 0 / 54%);
+    padding: 6px 10px;
+    font-size: 11px;
+    display: flex;
+    border-radius: 20px;
+    gap: 6px;
+    font-weight: 700;
+    align-items: center;
+}
+
+#games .hoverLayOut .top span {
+    color: #fff;
+}
+
+#games .hoverLayOut .top i {
+    color: #cbfe1c;
+}
+
+#games .hoverLayOut .bottom p {
+    padding-left: 8px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#games .hoverLayOut .bottom {
+    transform: translateY(100px);
+    transition: all 0.3s;
+}
+
+#games .sliderLayOut .image:hover .top {
+    transform: translateY(0px);
+}
+
+#games .sliderLayOut .image:hover .bottom {
+    transform: translateY(0px);
+}
+
+#games .sliderLayOut .image:hover .hoverLayOut {
+    opacity: 1;
+}
+
+#games .myPrevious {
+    width: 40px;
+    height: 40px;
+    top: 69%;
+    left: 36%;
+    border: 3px solid #364153;
+    border-radius: 50%;
+    font-size: 26px !important;
+    padding: 26px;
+    transition:
+        color 0.3s,
+        border 0.3s;
+}
+#games .myPrevious:hover {
+    color: #cbfe1c;
+    border: 3px solid #cbfe1c;
+}
+#games .myNext {
+    width: 40px;
+    height: 40px;
+    top: 69%;
+    left: 43%;
+    border: 3px solid #364153;
+    border-radius: 50%;
+    font-size: 26px !important;
+    padding: 26px;
+    transition:
+        color 0.3s,
+        border 0.3s;
+}
+#games .myNext:hover {
+    color: #cbfe1c;
+    border: 3px solid #cbfe1c;
+}
+#games .viewAllGames {
+    top: 69%;
+    left: 50%;
+    font-weight: 700;
+    border: 3px solid #cbfe1c;
+    background-color: transparent;
+    color: #cbfe1c;
+    padding: 13px 31px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+#games .viewAllGames:hover {
+    background-color: #cbfe1c;
+    color: rgb(11, 14, 19);
+}
+
+/* ======== WHAT WE DO ======= */
+#whatWeDo {
+    background-color: #0B0E13;
+    position: relative;
+    padding-block: 30px;
+}
+
+#whatWeDo .topText .interactive {
+    font-size: 48px;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    line-height: 48px;
+    color: #f1f1f1;
+}
+
+#whatWeDo .typeCard {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 54px 33px;
+    border: 1px solid #1e2939;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    width: 93%;
+    height: 93%;
+}
+
+#whatWeDo .typeCard::before {
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    transform: translate(-76px, -96px);
+    transition: all 0.3s;
+    border-color: #cbfe1c transparent transparent transparent;
+}
+
+#whatWeDo .typeCard:hover::before {
+    transform: translate(0px);;
+}
+#whatWeDo .typeCard::after {
+    position: absolute;
+    bottom: 6%;
+    right: 6%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    border-width: 0 0 30px 30px;
+    transform: translate(76px, 96px);
+    transition: all 0.3s;
+    border-color: transparent transparent #cbfe1c transparent;
+}
+
+#whatWeDo .typeCard:hover::after {
+    transform: translate(0);;
+}
+
+#whatWeDo .typeCard:hover {
+    border: 2px solid #cbfe1c;
+}
+
+#whatWeDo .typeCardImage {
+    width: 93%;
+    height: 93%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#whatWeDo .typeCardImage img {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+#whatWeDo .secondRow .typeCard {
+    min-height: 330px;
+}
+
+#whatWeDo .typeCard .icon {
+    color: #cbfe1c;
+    background-color: #1e2939;
+    width: 33%;
+    margin: 26px auto;
+    font-size: 26px;
+    padding: 22px 16px;
+    border-radius: 10px;
+    transition:
+        color 0.3s,
+        background-color 0.3s;
+}
+
+#whatWeDo .typeCard:hover .icon {
+    background-color: #cbfe1c;
+    color: #1a1a1a;
+}
+
+#whatWeDo .typeCard h3 {
+    color: #fff;
+}
+
+#whatWeDo::after {
+    content: "";
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 43%;
+    height: 2px;
+    padding-block: 1.3px;
+    background-image: linear-gradient(
+        to left,
+        #1a1a1a,
+        #cbfe1c,
+        #cbfe1c,
+        #cbfe1c,
+        #cbfe1c,
+        #1a1a1a
+    );
+    box-shadow:
+        0 0 10px #cbfe1c,
+        0 0 20px #cbfe1c,
+        0 0 30px #cbfe1c;
+}
+
+.animation {
+  background: radial-gradient(#cbfe1c 0%, transparent 70%);
+  padding: 85px 58px;
+  margin-block: 50px;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+}
+
+.animation-slide {
+  margin-right: 0.9375rem;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.slider-track.left {
+  animation: scroll-left 40s linear infinite;
+}
+.slider-track.right {
+  animation: scroll-left 40s linear infinite reverse;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+#team {
+  background-color: #0b0e13;
+  padding-bottom: 110px;
+}
+
+#team p.meet {
+  color: #99a1af;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.teamCard {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.teamCard img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.teamCard .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+  border-radius: 0 0 16px 16px;
+  z-index: 2;
+}
+
+.teamCard .grayOverlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: grayscale(100%);
+  transition:
+    backdrop-filter 0.6s ease,
+    top 0.7s;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.teamCard:hover .grayOverlay {
+  top: -100%;
+}
+
+.teamCard .cardInfo {
+  position: absolute;
+  z-index: 33;
+  bottom: 16px;
+  left: 16px;
+}
+
+.teamCard .cardInfo h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.teamCard .cardInfo .role {
+  color: #d1d5dc;
+  font-size: 13px;
+  margin: 0;
+}
+
+.teamCard .cardInfo .achievement {
+  color: #99a1af;
+  font-size: 12px;
+  margin: 0;
+}
+
+.teamCard .nickname {
+  position: absolute;
+  right: 4px;
+  bottom: 54px;
+  color: #cccccc;
+  font-size: 16px;
+  transform: rotate(90deg);
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  z-index: 33;
+}
+
+.teamCard:hover .nickname {
+  color: #cbfe1c;
+}
+.teamCard:hover .role {
+  color: #cbfe1c;
+}
+
+/* ======== CONTACT US ========= */
+.contact {
+  background-color: #101624;
+  padding-bottom: 111px;
+}
+
+.leftContact {
+  padding: 0px 24px;
+}
+
+.infoPanel {
+  background-color: #1e2939;
+  border-radius: 13px;
+  padding: 32px;
+  margin: 0px 0px 24px;
+}
+.infoPanel .icon {
+  color: #0b0e13;
+  background-color: #cbfe1c;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 64px;
+  height: 64px;
+}
+
+.infoPanel .text h3 {
+  font-family: "Days One", sans-serif;
+  color: #f1f1f1;
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.infoPanel p {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 16px;
+  color: #99a1af;
+  font-weight: 400;
+}
+
+.joinOurCommunity {
+  padding: 32px;
+  border-radius: 13px;
+  background-image: linear-gradient(to right, #cbfe1c, #29e070);
+}
+.joinOurCommunity h3 {
+  font-family: "Days One", sans-serif;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+.joinOurCommunity .socialMedia .icon {
+  background-color: #0B0E13;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 47px;
+  height: 47px;
+  transition: opacity 0.3s;
+}
+
+.contact .joinOurCommunity .socialMedia .icon i {
+  color: #cbfe1c !important;
+}
+
+.joinOurCommunity .socialMedia .icon:hover {
+  opacity: 0.7;
+}
+
+.rightContact {
+  background-color: #1E2939;
+  padding: 32px;
+  border-radius: 13px;
+}
+
+.customizedForm h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  font-family: "Days One", sans-serif;
+  color: #f1f1f1;
+}
+
+.form-control,
+.form-select {
+  background-color: #364153;
+  border: 2px solid #4a5565;
+  border-radius: 10px;
+  padding: 11px 16px;
+  font-size: 14px;
+  color: #9399a2;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.form-control {
+  background: #364153;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.form-control::placeholder {
+  color: #9399a2;
+}
+.form-select option {
+  color: #f1f1f1 !important;
+  font-size: 16px;
+  font-weight: 700;
+}
+.form-control:focus,
+.form-select:focus {
+  background-color: #364153;
+  border: 2px solid #cbfe1c;
+  color: #f1f1f1;
+  outline: none;
+}
+.customizedForm label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #d1d5dc;
+  margin-bottom: 10px;
+}
+
+textarea.form-control {
+  resize: none;
+  min-height: 185px;
+}
+
+textarea::placeholder {
+  color: #9399a2;
+}
+
+.form-check-input {
+  width: 20px;
+  height: 20px;
+  background-color: #364153;
+  border: 2px solid #4a5565;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+.form-check-input:checked {
+  background-color: #0075ff;
+  color: #fff;
+  border: 3px solid #cbfe1c;
+}
+
+.btn-send {
+  background: #cbfe1c;
+  color: #0b0e13;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 13px 26px;
+  gap: 10px;
+  border: 0;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.btn-send::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 165%;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0)
+  );
+  width: 50%;
+  height: 100%;
+  transform: skew(33deg);
+  transition: right 0.7s;
+}
+.btn-send:hover::before {
+  right: -111%;
+}
+.btn-send:hover {
+  background-color: #97bd16;
+}
+.form-check-label {
+  font-size: 16px;
+  color: #99a1af;
+}
+
+.formFooter {
+  text-align: center;
+  margin-block: 26px;
+  border-top: 1px solid #364153;
+}
+.formFooter p {
+  color: #cbfe1c;
+  font-weight: 700;
+  margin-bottom: 0px;
+  font-size: 26px;
+  margin-top: 33px;
+}
+.formFooter span {
+  color: #99a1af;
+}
+
+/* ========== FOOTER ============ */
+footer {
+  background-color: #000;
+  padding-block: 58px;
+}
+.footerTop {
+  border-bottom: 2px solid #1e2939;
+  padding-bottom: 26px;
+}
+.footerTop h4 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+.footerTop ul {
+  padding-left: 0 !important;
+  gap: 10px;
+  margin-block: 26px;
+}
+footer a,
+footer p {
+  color: #99a1af;
+}
+footer a {
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: #cbfe1c;
+}
+.socialMediaLinks {
+  gap: 20px;
+  font-size: 20px;
+}
+footer .gameArena .logo {
+  color: #cbfe1c;
+  font-weight: 700;
+  font-size: 20px;
+}
+footer .gameArena p,
+footer .footerBottom p {
+  margin-bottom: 24px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+.footerBottom {
+  padding-top: 26px;
+}
+.footerBottom ul {
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  #games .sliderLayOut .image img {
+    height: 500px;
+  }
+  #whatWeDo .topText p.decorated::before {
+    right: 58%;
+  }
+  #whatWeDo .topText p.decorated::after {
+    left: 58%;
+  }
+  #whatWeDo::after {
+    bottom: 29%;
+  }
+  #team .topText p.decorated::before {
+    right: 58%;
+  }
+  #team .topText p.decorated::after {
+    left: 58%;
+  }
+  #games .topText p.decorated::after {
+    left: 58%;
+  }
+  #games .topText p.decorated::before {
+    right: 58%;
+  }
+  #games .sliderLayOut .image {
+    width: 100%;
+  }
+  #games .myPrevious {
+    top: 94%;
+    left: 26%;
+  }
+  #games .myNext {
+    top: 94%;
+    left: 36%;
+  }
+  #games .viewAllGames {
+    top: 94%;
+    left: 50%;
+  }
+  #whatWeDo .typeCard {
+    padding-block: 43px !important;
+  }
+  #whatWeDo .typeCard .icon {
+    margin: 36px auto;
+    padding: 16px 28px;
+  }
+  #whatWeDo .typeCard h3 {
+    font-size: 20px;
+  }
+  #contact .topText p.decorated::before {
+    right: 58%;
+  }
+  #contact .topText p.decorated::after {
+    left: 58%;
+  }
+}
+@media (max-width: 900px) {
+  #games .myNext {
+    left: 47%;
+  }
+  #games .viewAllGames {
+    left: 58%;
+  }
+  #whatWeDo::after {
+    bottom: 20%;
+  }
+  #games .topText p.decorated::before {
+    right: 59%;
+  }
+  #games .topText p.decorated::after {
+    left: 59%;
+  }
+  #whatWeDo .topText p.decorated::before {
+    right: 63%;
+  }
+  #whatWeDo .topText p.decorated::after {
+    left: 63%;
+  }
+  #team .topText p.decorated::before {
+    right: 59%;
+  }
+  #team .topText p.decorated::after {
+    left: 59%;
+  }
+  #contact .topText p.decorated::before {
+    right: 62%;
+  }
+  #contact .topText p.decorated::after {
+    left: 62%;
+  }
+  #games .viewAllGames {
+    top: 85%;
+    left: 54%;
+  }
+  #games .myPrevious {
+    top: 85%;
+    left: 26%;
+  }
+  #games .myNext {
+    top: 85%;
+    left: 38%;
+  }
+}
+@media (max-width: 768px) {
+  #games .topText p.decorated::before {
+    right: 61%;
+  }
+  #games .topText p.decorated::after {
+    left: 61%;
+  }
+  #games .sliderLayOut .image {
+    width: 100%;
+  }
+  #games .myPrevious {
+    left: 13%;
+    top: 83%;
+  }
+  #games .myNext {
+    left: 31%;
+    top: 83%;
+  }
+  #games .viewAllGames {
+    left: 47%;
+    top: 83%;
+  }
+  #whatWeDo::after {
+    bottom: 20%;
+  }
+  .footerBottom ul {
+    padding-left: 0 !important;
+  }
+  footer .games {
+    padding-left: 0 !important;
+    padding-top: 26px;
+  }
+  #whatWeDo .topText p.decorated::before {
+    right: 63%;
+  }
+  #whatWeDo .topText p.decorated::after {
+    left: 63%;
+  }
+  #team .topText p.decorated::before {
+    right: 61%;
+  }
+  #team .topText p.decorated::after {
+    left: 61%;
+  }
+  #contact .topText p.decorated::before {
+    right: 63%;
+  }
+  #contact .topText p.decorated::after {
+    left: 63%;
+  }
+}
+
+@media (max-width: 576px) {
+  #hero .heroContent .heroText h1 {
+    font-size: 36px;
+  }
+  #contact .topText p.decorated::before {
+    right: 65%;
+  }
+  #contact .topText p.decorated::after {
+    left: 65%;
+  }
+  #games .topText p.decorated::before {
+    right: 65%;
+  }
+  #team .topText p.decorated::before {
+    right: 63%;
+  }
+  #team .topText p.decorated::after {
+    left: 65%;
+  }
+  #games .topText p.decorated::after {
+    left: 65%;
+  }
+  #games .sliderLayOut .image {
+    width: 100%;
+  }
+  #games .myPrevious {
+    top: 80%;
+    left: 33%;
+  }
+  #games .myNext {
+    top: 80%;
+    left: 54%;
+  }
+  #games .viewAllGames {
+    left: 0%;
+    top: 94%;
+    width: 100%;
+  }
+  #whatWeDo .topText p.decorated::before {
+    right: 67%;
+  }
+  #whatWeDo .topText p.decorated::after {
+    left: 67%;
+  }
+  #hero .heroContent .heroImage .bottomText {
+    bottom: -33px;
+    left: 13px;
+  }
+  .g-5,
+  .gx-5 {
+    --bs-gutter-x: 0 !important;
+  }
+  #whatWeDo p.interactive {
+    font-size: 28px;
+  }
+  .teamCard img {
+    height: 200px;
+  }
+}
